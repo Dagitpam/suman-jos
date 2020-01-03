@@ -1,11 +1,38 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
-@section('content')
+@section('content') --}}
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body><br><br><br>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-6 offset-md-6">
             <div class="card">
-                <div class="card-header bg-danger text-white">{{ __('Login') }}</div>
+                <div class="card-header bg-danger text-white">
+                    
+                    {{ __('Login') }} 
+                    <a class="nav-link text-white float-right" href="{{ route('register') }}">{{ __('Sign up?') }}</a>
+
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -48,9 +75,12 @@
 
                         <div class="form-group">
                                 <button type="submit" class="btn btn-danger float-md-right">
-                                    {{ __('Login') }}
+                                    {{ __('Proceed') }}
                                 </button>
-
+                                <button type="submit" class="btn btn-warning float-md-left text-white">
+                                        <a href="/">Cancel</a>
+                                    </button>
+                                <br><br>
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
@@ -62,5 +92,8 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div><br><br><br><br>
+@include('includes.footer')
+</body>
+</html>
+{{-- @endsection --}}
