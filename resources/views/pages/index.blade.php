@@ -1,71 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="card" style="border: none; border-radius: 0px; height: 300px; background-color: red;">
-            <!--Carousel Wrapper-->
-            <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-                <!--Indicators-->
-                <ol class="carousel-indicators">
-                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-2" data-slide-to="1"></li>
-                <li data-target="#carousel-example-2" data-slide-to="2"></li>
-                </ol>
-                <!--/.Indicators-->
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="view">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
-                        alt="First slide" height="300px">
-                    <div class="mask rgba-black-light"></div>
-                    </div>
-                    <div class="carousel-caption">
-                    <h3 class="h3-responsive">Light mask</h3>
-                    <p>First text</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <!--Mask color-->
-                    <div class="view">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
-                        alt="Second slide" height="300px">
-                    <div class="mask rgba-black-strong"></div>
-                    </div>
-                    <div class="carousel-caption">
-                    <h3 class="h3-responsive">Strong mask</h3>
-                    <p>Secondary text</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <!--Mask color-->
-                    <div class="view">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
-                        alt="Third slide" height="300px">
-                    <div class="mask rgba-black-slight"></div>
-                    </div>
-                    <div class="carousel-caption">
-                    <h3 class="h3-responsive">Slight mask</h3>
-                    <p>Third text</p>
-                    </div>
-                </div>
-                </div>
-                <!--/.Slides-->
-                <!--Controls-->
-                <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-                </a>
-                <!--/.Controls-->
-            </div>
-            <!--/.Carousel Wrapper-->
-    </div>
-    <div class="card" style="height: 50px; background-color: #ccc; border-radius: 0px;">
-
-    </div>
+      <div class="container">
+        <div class="jumbotron" style="height: 300px;">
+          <h1>Bootstrap Tutorial</h1>      
+          <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+          <button class="btn btn-info text-white">LogIn</button>
+          <button class="btn btn-info text-white">Register</button>
+        </div>     
+      </div>
     <br>
     <div class="container">
         <div class="card-deck">
@@ -95,6 +38,70 @@
             </div>
           </div>
     </div>
+    <br>
+
+    <div class="container">
+      <div class="card" style="border-radius: 0px; border: none;">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card" style="border: none;">
+              <div class="card-body">
+                <h5 class="card-title">Contact Us</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                <form action="" method="post">
+                  <div class="form-group">
+                    <label for="name"><i class="fa fa-user"></i>&nbsp;Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="emailphone"><i class="fa fa-phone-square"></i> &nbsp;Email or Phone No</label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message"><i class="fa fa-envelope-o"></i>&nbsp;Message</label>
+                    <textarea name="message" id="message" class="form-control" cols="30" rows="5"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-info text-white btn-sm">Send</button>
+
+                </form>
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card" style="border: none;">
+              <div class="card-body">
+                <h5 class="card-title">About Us</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                  With supporting text below as a natural lead-in to additional content.
+                </p>
+                <a href="#" class="btn btn-info text-white btn-sm">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
     
 @endsection
