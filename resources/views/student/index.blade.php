@@ -6,7 +6,7 @@
         <h3 class="page-title">
           <span class="page-title-icon bg-gradient-danger text-white mr-2">
             <i class="mdi mdi-home"></i>
-          </span> Dashboard </h3>
+          </span>Student Dashboard </h3>
         <nav aria-label="breadcrumb">
           <ul class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">
@@ -23,7 +23,7 @@
               <h4 class="font-weight-normal mb-3">Admission Form<i class="mdi mdi-file-multiple mdi-24px float-right"></i>
               </h4>
               <h2 class="mb-5">N 3,500</h2>
-              <button class="btn btn-danger btn-sm text-white"><a href="#" style="text-decoration: none; color:white;">Buy Now!</a></button>
+              <button class="btn btn-danger btn-sm text-white"><a href="#" style="text-decoration: none; color:white;">Apply Now!</a></button>
             </div>
           </div>
         </div>

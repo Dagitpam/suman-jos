@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'PagesController@index');
 Route::resource('/student','StudentsController');
+Route::get('/application-form','StudentsController@create');
