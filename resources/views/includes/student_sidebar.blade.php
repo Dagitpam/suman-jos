@@ -24,17 +24,17 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-              <span class="menu-title text-danger">Admission form</span>
+              <span class="menu-title text-danger">Add School</span>
               <i class="mdi mdi-file menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <span class="menu-title text-danger">Admission status</span>
+              <span class="menu-title text-danger">Settlement</span>
               <i class="mdi mdi-account-check menu-icon"></i>
             </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="#">
               <span class="menu-title text-danger">Invoice</span>
               <i class="mdi mdi-receipt menu-icon"></i>
@@ -45,7 +45,7 @@
               <span class="menu-title text-danger">Account</span>
               <i class="mdi mdi-account menu-icon"></i>
             </a>
-          </li>
+          </li> --}}
         
       </ul>
     </nav>

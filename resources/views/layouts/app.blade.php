@@ -28,5 +28,6 @@
         </main>
     </div>
     @include('includes.footer')
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>

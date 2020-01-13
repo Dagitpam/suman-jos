@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'PagesController@index');
 Route::resource('/student','StudentsController');
+Route::post('/addschool','StudentsController@store');
+Route::get('school_pro', 'StudentsController@viewSchool')->middleware('auth');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\schoolmodel;
 
 class StudentsController extends Controller
 {
@@ -23,7 +24,8 @@ class StudentsController extends Controller
     public function index()
     {
         //
-        return view('student.index');
+        // return schoolmodel::all();
+        return view('dashboard.index');
     }
 
     /**
@@ -44,7 +46,53 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validation
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+        
+        if ($validator->passes()) {
+                
+            if($ada > 0){
+                Session::flash('tolong', 'Data Exist!');
+                return redirect()->to('dashboard.index');
+            } else{ 
+                return response()->json(['success'=>'Added new records.']);
+            }
+        }
+
+
+
+        $schoolName = $request->input('name');
+        $schoolAddress = $request->input('address');
+        $periodfrom = $request->input('periodfrom');
+        $periodto = $request->input('periodto');
+        $category = $request->input('category');
+        $schemail = $request->input('schemail');
+        $schphone = $request->input('schphone');
+
+        $result = array(
+            'schoolName'=>$schoolName,
+            'schoolAddress'=>$schoolAddress,
+            'periodfrom'=>$periodfrom,
+            'periodto'=>$periodto,
+            'category'=>$category,
+            'schemail'=>$schemail,
+            'schphone'=>$schphone,
+        );
+
+        // $addschool = new schoolmodel();
+        // $addschool-> schoolname = $schoolName;
+        // $addschool-> schoolid = 121212121;
+        // $addschool-> schooladdress = $schoolAddress;
+        // $addschool-> periodfrom = $periodfrom;
+        // $addschool-> periodto = $periodto;
+        // $addschool-> email = $schemail;
+        // $addschool-> contactnumber = $schphone;
+        // $addschool-> category = $category;
+        // $addschool->save();
+
+        return response()->json($result, 200);
     }
 
     /**
@@ -90,5 +138,9 @@ class StudentsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function viewSchool(){
+        return view('dashboard.schoolprofile');
     }
 }

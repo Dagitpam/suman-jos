@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::middleware('apimidcheck')->get('register/{token}/{schoolid}/{studentid}/{email}/{status}', 'UsersControllerApi@index');
+
